@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lemon Hotel | Toshkentdagi Hashamatli Mehmonxona</title>
+  <meta name="description" content="Lemon Hotel - Oliy darajadagi xizmat, shinam xonalar va unutilmas hordiq maskani. Toshkent markazida joylashgan premium mehmonxona.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <a href="tel:+998957973366"><i class="fa-solid fa-phone"></i> +998 (95) 797-33-66</a>
+        <a href="mailto:lemonhoteluz@gmail.com"><i class="fa-solid fa-envelope"></i> lemonhoteluz@gmail.com</a>
+        <span><i class="fa-solid fa-location-dot"></i> Toshkent sh., Amir Temur ko'chasi, 15</span>
+      </div>
+      <div class="top-bar-right">
+        <span><i class="fa-solid fa-clock"></i> 24/7 Qabulxona xizmati</span>
+        <a href="admin.php" style="color: var(--primary-light);"><i class="fa-solid fa-lock"></i> Admin Panel</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. NAVBAR -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-lemon"></i></div>
+        <span>Lemon Hotel</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Bosh sahifa</a>
+        <a href="rooms.html">Xonalar & Narxlar</a>
+        <a href="about.html">Biz haqimizda</a>
+        <a href="#services">Xizmatlar</a>
+        <a href="#faq">FAQ</a>
+        <a href="contact.html">Aloqa</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="booking.html" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> Xonani bron qilish
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menyu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. HERO SECTION -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fa-solid fa-star"></i> 5 Yulduzli Qulaylik & Hashamat
+        </div>
+        <h1 class="hero-title">Hordiq va qulaylikning eng oliy darajasi</h1>
+        <p class="hero-desc">
+          Shahar markazida joylashgan Lemon Hotel sizga unutilmas dam olish, shinam xonalar, shved stoli nonushtasi va 24/7 yuqori darajadagi xizmatni taqdim etadi.
+        </p>
+        <div class="hero-buttons">
+          <a href="booking.html" class="btn btn-primary">
+            <i class="fa-solid fa-calendar-check"></i> Xonani bron qilish
+          </a>
+          <a href="rooms.html" class="btn btn-outline">
+            <i class="fa-solid fa-eye"></i> Xonalar bilan tanishish
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. QUICK BOOKING WIDGET -->
+  <div class="booking-widget-wrapper">
+    <div class="container">
+      <div class="quick-booking-card">
+        <form class="quick-booking-form" id="quickBookingForm">
+          <div class="widget-group">
+            <label for="quick_room_type">Xona turi</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-bed"></i>
+              <select id="quick_room_type" required>
+                <option value="standard">Standart Qulay Xona</option>
+                <option value="deluxe">Deluxe Premium Xona</option>
+                <option value="suite">Luxe Biznes Suite</option>
+                <option value="family">Prezident Oilaviy Suite</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="widget-group">
+            <label for="quick_check_in">Kelish sanasi</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-calendar-day"></i>
+              <input type="date" id="quick_check_in" required>
+            </div>
+          </div>
+
+          <div class="widget-group">
+            <label for="quick_check_out">Ketish sanasi</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-calendar-check"></i>
+              <input type="date" id="quick_check_out" required>
+            </div>
+          </div>
+
+          <div class="widget-group">
+            <label for="quick_guests">Mehmonlar</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-user-group"></i>
+              <select id="quick_guests">
+                <option value="1">1 kishi</option>
+                <option value="2" selected>2 kishi</option>
+                <option value="3">3 kishi</option>
+                <option value="4">4+ kishi</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="height: 48px;">
+            <i class="fa-solid fa-magnifying-glass"></i> Narxni ko'rish & Bron
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. STATS COUNTER SECTION -->
+  <section class="stats-section">
+    <div class="container stats-container">
+      <div class="stat-item">
+        <h3>440+</h3>
+        <p>Zamonaviy va shinam xonalar</p>
+      </div>
+      <div class="stat-item">
+        <h3>98%</h3>
+        <p>Mamnun mehmonlar ulushi</p>
+      </div>
+      <div class="stat-item">
+        <h3>15+</h3>
+        <p>Yillik mehmondo'stlik tajribasi</p>
+      </div>
+      <div class="stat-item">
+        <h3>24/7</h3>
+        <p>Konsyerj va Room Service</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. ABOUT SECTION -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-col">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80" alt="Lemon Hotel Binosi" class="about-main-img">
+          <div class="experience-badge">
+            <div class="exp-num">15+</div>
+            <div class="exp-text">Yillik mukammal tajriba</div>
+          </div>
+        </div>
+        <div class="about-content-col">
+          <span class="section-tag"><i class="fa-solid fa-hotel"></i> Lemon Hotel Haqida</span>
+          <h2 class="section-title">Milliy mehmondo'stlik va zamonaviy hashamat uyg'unligi</h2>
+          <p>
+            Mehmonxonamiz milliy va xalqaro bezaklarning ko'zni qamashtiruvchi uyg'unligini aks ettiruvchi hashamatli lobbi hamda 440 dan ortiq premium xonalarga ega.
+          </p>
+          <p>
+            Old qabulxonadagi ko'p tilli professional xodimlarimiz sizning har bir daqiqangiz maroqli o'tishini ta'minlaydi. Dam olish, sayohat yoki biznes tashriflari uchun eng ideal tanlov.
+          </p>
+
+          <div class="about-features">
+            <div class="feature-check"><i class="fa-solid fa-check"></i> Shahar markazida qulay joylashuv</div>
+            <div class="feature-check"><i class="fa-solid fa-check"></i> Bepul shved stoli nonushtasi</div>
+            <div class="feature-check"><i class="fa-solid fa-check"></i> Yuqori tezlikdagi bepul Wi-Fi</div>
+            <div class="feature-check"><i class="fa-solid fa-check"></i> Spa, basseyn va fitnes zallari</div>
+          </div>
+
+          <a href="about.html" class="btn btn-dark">
+            Batafsil ma'lumot <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. ROOMS SECTION -->
+  <section class="rooms-section" id="rooms">
+    <div class="container">
+      <div class="text-center rooms-header">
+        <span class="section-tag"><i class="fa-solid fa-bed"></i> Bizning Xonalar</span>
+        <h2 class="section-title">Oliy toifadagi xonalar va suitlar</h2>
+        <p class="section-subtitle">O'zingizga ma'qul xonani tanlang va qulay narxlarda onlayn bron qiling.</p>
+      </div>
+
+      <div class="rooms-grid">
+        <!-- Room 1 -->
+        <div class="room-card">
+          <div class="room-image-wrap">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Standart Xona">
+            <div class="room-price-badge"><span>380 000</span> so'm / tun</div>
+          </div>
+          <div class="room-body">
+            <h3 class="room-title">Standart Qulay Xona</h3>
+            <div class="room-specs">
+              <span><i class="fa-solid fa-user-group"></i> 2 kishi</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 28 m²</span>
+              <span><i class="fa-solid fa-bed"></i> 1 King Bed</span>
+            </div>
+            <p class="room-desc">Yakkaxon yoki juftliklar uchun barcha zaruriy qulayliklarga ega, sokin va shinam xona.</p>
+            <div class="room-amenities">
+              <span class="amenity-pill">Tezkor Wi-Fi</span>
+              <span class="amenity-pill">Konditsioner</span>
+              <span class="amenity-pill">Smart TV</span>
+              <span class="amenity-pill">Nonushta</span>
+            </div>
+            <div class="room-actions">
+              <a href="booking.html?room=standard" class="btn btn-primary">Bron qilish</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="room-card">
+          <div class="room-image-wrap">
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80" alt="Deluxe Xona">
+            <div class="room-price-badge"><span>580 000</span> so'm / tun</div>
+          </div>
+          <div class="room-body">
+            <h3 class="room-title">Deluxe Premium Xona</h3>
+            <div class="room-specs">
+              <span><i class="fa-solid fa-user-group"></i> 2 kishi</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 40 m²</span>
+              <span><i class="fa-solid fa-bed"></i> King Size</span>
+            </div>
+            <p class="room-desc">Shahar manzarasi, katta derazalar va qo'shimcha dam olish hududiga ega nafis xona.</p>
+            <div class="room-amenities">
+              <span class="amenity-pill">Shahar manzarasi</span>
+              <span class="amenity-pill">Mini-bar</span>
+              <span class="amenity-pill">Shved stoli</span>
+              <span class="amenity-pill">Vanna & Dush</span>
+            </div>
+            <div class="room-actions">
+              <a href="booking.html?room=deluxe" class="btn btn-primary">Bron qilish</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 3 -->
+        <div class="room-card">
+          <div class="room-image-wrap">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Luxe Suite">
+            <div class="room-price-badge"><span>890 000</span> so'm / tun</div>
+          </div>
+          <div class="room-body">
+            <h3 class="room-title">Luxe Biznes Suite</h3>
+            <div class="room-specs">
+              <span><i class="fa-solid fa-user-group"></i> 3 kishi</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 58 m²</span>
+              <span><i class="fa-solid fa-couch"></i> Mehmonxona zali</span>
+            </div>
+            <p class="room-desc">Alohida mehmonxona zali va yotoqxonadan iborat, ishbilarmonlar va VIP mehmonlar uchun hashamatli xona.</p>
+            <div class="room-amenities">
+              <span class="amenity-pill">VIP Nonushta</span>
+              <span class="amenity-pill">Djakuzi vanna</span>
+              <span class="amenity-pill">Ish stoli</span>
+              <span class="amenity-pill">24/7 Room Service</span>
+            </div>
+            <div class="room-actions">
+              <a href="booking.html?room=suite" class="btn btn-primary">Bron qilish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 40px;">
+        <a href="rooms.html" class="btn btn-dark">
+          Barcha xonalarni ko'rish <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. SERVICES SECTION -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-bell-concierge"></i> Xizmatlarimiz</span>
+        <h2 class="section-title">Sizning qulayligingiz uchun barcha sharoitlar</h2>
+        <p class="section-subtitle">Mehmonxonamizda maroqli vaqt o'tkazishingiz uchun eng zamonaviy imkoniyatlar yaratilgan.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-utensils"></i></div>
+          <h3>Shved stoli & Restoran</h3>
+          <p>Oliy toifali oshpazlarimizdan yangi va saralangan milliy hamda yevropa taomlari to'plami.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-spa"></i></div>
+          <h3>Spa & Sauna Kompleksi</h3>
+          <p>Charchoqni chiqaruvchi fin saunasi, turk hamomi va professional massaj xizmatlari.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-person-swimming"></i></div>
+          <h3>Basseyn & Dam olish zonasi</h3>
+          <p>Harorat nazoratiga ega yopiq va ochiq basseynlarimiz yilning istalgan faslida xizmatingizda.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-dumbbell"></i></div>
+          <h3>Fitnes zal</h3>
+          <p>Zamonaviy trenajyorlar bilan jihozlangan zal sizning jismoniy faolligingizni qo'llab-quvvatlaydi.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-van-shuttle"></i></div>
+          <h3>Aeroport Transferi</h3>
+          <p>Mehmonlarimizni aeroport yoki vokzaldan qulay transportda kutib olish va kuzatish xizmati.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>24/7 Xavfsizlik & Parking</h3>
+          <p>Keng qo'riqlanadigan avtoturargoh va butun hudud bo'ylab tunu-kun xavfsizlik nazorati.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. TESTIMONIALS SECTION -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-comments"></i> Sharhlar</span>
+        <h2 class="section-title">Mehmonlarimiz biz haqimizda</h2>
+        <p class="section-subtitle">Sayyohlar va mehmonlarimizning Lemon Hotel haqidagi samimiy fikrlari.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>“Toshkent markazida bunday shinam va toza mehmonxona topganimdan juda xursandman. Nonushtasi nihoyatda mazali, xodimlar esa juda xushmuomala!”</p>
+          <div class="client-meta">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Mijoz rasmi" class="client-avatar">
+            <div class="client-info">
+              <h4>Madina Karimova</h4>
+              <span>Samarqand</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>“Biznes uchrashuv uchun Deluxe xonani bron qilgandik. Internet tezligi juda yuqori, shovqindan xoli va shahar manzarasi chiroyli. Hammaga tavsiya qilaman.”</p>
+          <div class="client-meta">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Mijoz rasmi" class="client-avatar">
+            <div class="client-info">
+              <h4>Akmal Rustamov</h4>
+              <span>Toshkent</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>“Oilaviy ta'tilda bo'ldik. Bolalar uchun basseyn juda yoqdi. Onlayn bron qilish tizimi ham juda qulay ishladi, buyurtma kodi darhol berildi.”</p>
+          <div class="client-meta">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Mijoz rasmi" class="client-avatar">
+            <div class="client-info">
+              <h4>Farxod Yo'ldoshev</h4>
+              <span>Buxoro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FAQ SECTION -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-circle-question"></i> Savol-Javob</span>
+        <h2 class="section-title">Ko'p beriladigan savollar</h2>
+        <p class="section-subtitle">Mehmonlarimizni eng ko'p qiziqtirgan savollarga javoblar.</p>
+      </div>
+
+      <div class="faq-wrapper">
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span>Ro'yxatdan o'tish (Check-in) va chiqish (Check-out) vaqtlari qanday?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Ro'yxatdan o'tish (Check-in) vaqti soat 14:00 dan boshlanadi, chiqish (Check-out) esa 12:00 gacha amalga oshiriladi. Oldindan kelishilgan holda erta joylashish imkoniyati mavjud.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Nonushta xona narxiga kiritilganmi?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Ha, barcha turdagi xonalarimiz uchun har kuni ertalabki 07:00 dan 10:30 gacha hashamatli shved stoli nonushtasi xona narxiga to'liq kiritilgan.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Aeroportdan kutib olish (transfer) xizmati mavjudmi?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Albatta, bron qilish chog'ida yoki qo'ng'iroq orqali reys raqamingizni aytsangiz, haydovchimiz sizni aeroportda kutib oladi.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Buyurtmani bekor qilish yoki sanasini o'zgartirish mumkinmi?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Kelish sanasidan 24 soat oldin xabar berilsa, bron qilish bepul bekor qilinadi yoki yangi sanalarga ko'chiriladi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Dam olishingizni bugunoq rejalashtiring!</h2>
+      <p>Eng yaxshi xonalarni eng qulay narxlarda bron qilish imkoniyatini qo'ldan boy bermang.</p>
+      <a href="booking.html" class="btn btn-primary" style="font-size: 16px; padding: 14px 34px;">
+        <i class="fa-solid fa-calendar-check"></i> Hozir bron qilish
+      </a>
+    </div>
+  </section>
+
+  <!-- 12. FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fa-solid fa-lemon"></i></div>
+            <span>Lemon Hotel</span>
+          </a>
+          <p>
+            Toshkent shahrining markazida hashamatli va maroqli hordiq. Xalqaro me'yorlarga to'liq mos keladigan oliy toifali mehmondo'stlik maskani.
+          </p>
+          <div class="social-links">
+            <a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Tezkor havolalar</h3>
+          <ul>
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="rooms.html">Xonalar katalogi</a></li>
+            <li><a href="about.html">Biz haqimizda</a></li>
+            <li><a href="booking.html">Xonani bron qilish</a></li>
+            <li><a href="contact.html">Aloqa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Xizmatlar</h3>
+          <ul>
+            <li><a href="#services">Shved stoli nonushtasi</a></li>
+            <li><a href="#services">Spa & Sauna</a></li>
+            <li><a href="#services">Fitnes zal</a></li>
+            <li><a href="#services">Basseyn</a></li>
+            <li><a href="#services">Aeroport transferi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Aloqa ma'lumotlari</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Toshkent sh., Amir Temur ko'chasi, 15-uy</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+998 (95) 797-33-66</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>lemonhoteluz@gmail.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-lock"></i>
+            <a href="admin.php" style="color: var(--primary-light);">Admin boshqaruv tizimi</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lemon Hotel. Barcha huquqlar himoyalangan.</p>
+        <div>
+          <a href="admin.php">Admin Panel</a> &nbsp;|&nbsp; 
+          <a href="contact.html">Yordam</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biz haqimizda | Lemon Hotel</title>
+  <meta name="description" content="Lemon Hotel - Tariximiz, missiyamiz va oliy sifatli xizmat ko'rsatish falsafamiz haqida.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <a href="tel:+998957973366"><i class="fa-solid fa-phone"></i> +998 (95) 797-33-66</a>
+        <a href="mailto:lemonhoteluz@gmail.com"><i class="fa-solid fa-envelope"></i> lemonhoteluz@gmail.com</a>
+        <span><i class="fa-solid fa-location-dot"></i> Toshkent sh., Amir Temur ko'chasi, 15</span>
+      </div>
+      <div class="top-bar-right">
+        <span><i class="fa-solid fa-clock"></i> 24/7 Qabulxona xizmati</span>
+        <a href="admin.php" style="color: var(--primary-light);"><i class="fa-solid fa-lock"></i> Admin Panel</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-lemon"></i></div>
+        <span>Lemon Hotel</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Bosh sahifa</a>
+        <a href="rooms.html">Xonalar & Narxlar</a>
+        <a href="about.html" class="active">Biz haqimizda</a>
+        <a href="index.html#services">Xizmatlar</a>
+        <a href="contact.html">Aloqa</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="booking.html" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> Xonani bron qilish
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menyu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Biz haqimizda</h1>
+      <p>15 yildan buyon har bir mehmonimizga samimiy mehmondo'stlik va xalqaro 5 yulduzli standartlarni taqdim etib kelmoqdamiz.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT DETAIL SECTION -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-col">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80" alt="Lemon Hotel Fasadi" class="about-main-img">
+          <div class="experience-badge">
+            <div class="exp-num">15+</div>
+            <div class="exp-text">Yillik mukammal tajriba</div>
+          </div>
+        </div>
+        <div class="about-content-col">
+          <span class="section-tag"><i class="fa-solid fa-hotel"></i> Tariximiz va Maqsadimiz</span>
+          <h2 class="section-title">O'zbek mehmondo'stligini jahon darajasida his eting</h2>
+          <p>
+            Lemon Hotel — Toshkent shahrining gavjum va chiroyli markazida joylashgan, zamonaviy arxitektura va milliy qadriyatlarni o'zida uyg'unlashtirgan hashamatli maskan. Bizning asosiy maqsadimiz har bir mehmonimiz uchun unutilmas taassurotlar va o'z uyidagidek qulaylik muhitini yaratishdir.
+          </p>
+          <p>
+            Mehmonxonamizda 440 dan ortiq to'liq jihozlangan xonalar, xalqaro taomlar restorani, zamonaviy sog'lomlashtirish va Spa markazi hamda xalqaro anjumanlar uchun keng konferens-zallar faoliyat ko'rsatmoqda.
+          </p>
+
+          <div class="about-features">
+            <div class="feature-check"><i class="fa-solid fa-check"></i> 440+ hashamatli xona</div>
+            <div class="feature-check"><i class="fa-solid fa-check"></i> 24/7 Professional xizmat</div>
+            <div class="feature-check"><i class="fa-solid fa-check"></i> Xalqaro sertifikatlangan sifat</div>
+            <div class="feature-check"><i class="fa-solid fa-check"></i> Yuqori toifali restoran va oshpazlar</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES SECTION -->
+  <section class="services-section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag"><i class="fa-solid fa-gem"></i> Asosiy Qadriyatlarimiz</span>
+        <h2 class="section-title">Biz nima uchun alohida e'tirofga loyiqmiz?</h2>
+        <p class="section-subtitle">Sifat va mijoz mamnuniyati — bizning kundalik faoliyatimizning bosh mezoni.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+          <h3>Samimiy Mehmondo'stlik</h3>
+          <p>Har bir tashrif buyuruvchini qadrdon mehmonday kutib olamiz va barcha ehtiyojlarini birinchi o'ringa qo'yamiz.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-pump-medical"></i></div>
+          <h3>Mukammal Tozalik</h3>
+          <p>Barcha xonalar va jamoat joylari har kuni zamonaviy ekologik vositalar bilan chuqur dezinfeksiya va tozalashdan o'tadi.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+          <h3>Tezkor Yechimlar</h3>
+          <p>Har qanday savol yoki talab bir necha daqiqa ichida xodimlarimiz tomonidan hal etiladi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fa-solid fa-lemon"></i></div>
+            <span>Lemon Hotel</span>
+          </a>
+          <p>
+            Toshkent shahrining markazida hashamatli va maroqli hordiq. Xalqaro me'yorlarga to'liq mos keladigan oliy toifali mehmondo'stlik maskani.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Tezkor havolalar</h3>
+          <ul>
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="rooms.html">Xonalar katalogi</a></li>
+            <li><a href="about.html">Biz haqimizda</a></li>
+            <li><a href="booking.html">Xonani bron qilish</a></li>
+            <li><a href="contact.html">Aloqa</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Aloqa</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+998 (95) 797-33-66</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>lemonhoteluz@gmail.com</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Boshqaruv</h3>
+          <p style="margin-bottom: 12px; font-size: 13px;">Mehmonxona boshqaruv tizimi faqat xodimlar uchun:</p>
+          <a href="admin.php" class="btn btn-primary" style="padding: 8px 16px; font-size: 13px;">
+            <i class="fa-solid fa-lock"></i> Admin Panel
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lemon Hotel. Barcha huquqlar himoyalangan.</p>
+        <div><a href="admin.php">Admin tizimi</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

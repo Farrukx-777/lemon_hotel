@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xonani bron qilish | Lemon Hotel</title>
+  <meta name="description" content="Lemon Hotel xonalarini qulay va tezkor tarzda onlayn bron qiling.">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <a href="tel:+998957973366"><i class="fa-solid fa-phone"></i> +998 (95) 797-33-66</a>
+        <a href="mailto:lemonhoteluz@gmail.com"><i class="fa-solid fa-envelope"></i> lemonhoteluz@gmail.com</a>
+        <span><i class="fa-solid fa-location-dot"></i> Toshkent sh., Amir Temur ko'chasi, 15</span>
+      </div>
+      <div class="top-bar-right">
+        <span><i class="fa-solid fa-clock"></i> 24/7 Qabulxona xizmati</span>
+        <a href="admin.php" style="color: var(--primary-light);"><i class="fa-solid fa-lock"></i> Admin Panel</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="header-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-lemon"></i></div>
+        <span>Lemon Hotel</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Bosh sahifa</a>
+        <a href="rooms.html">Xonalar & Narxlar</a>
+        <a href="about.html">Biz haqimizda</a>
+        <a href="index.html#services">Xizmatlar</a>
+        <a href="contact.html">Aloqa</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="booking.html" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> Xonani bron qilish
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menyu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Xonani Onlayn Bron Qilish</h1>
+      <p>Sanalarni va o'zingizga yoqqan xonani tanlang. Buyurtmangiz darhol qabul qilinadi.</p>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section class="booking-page-wrap">
+    <div class="container">
+      <div class="booking-layout-grid">
+        <!-- Chap tomonda: Forma -->
+        <div class="form-card">
+          <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 24px; color: var(--dark);">
+            <i class="fa-solid fa-file-pen" style="color: var(--primary); margin-right: 8px;"></i> Buyurtma ma'lumotlarini to'ldiring
+          </h2>
+
+          <form id="mainBookingForm">
+            <!-- 1. Xona turi -->
+            <div class="form-group">
+              <label for="room_type">Xona turini tanlang <span class="required">*</span></label>
+              <div class="input-icon-wrap">
+                <i class="fa-solid fa-bed"></i>
+                <select id="room_type" name="room_type" required>
+                  <option value="standard">Standart Qulay Xona — 380 000 so'm / tun</option>
+                  <option value="deluxe">Deluxe Premium Xona — 580 000 so'm / tun</option>
+                  <option value="suite">Luxe Biznes Suite — 890 000 so'm / tun</option>
+                  <option value="family">Prezident Oilaviy Suite — 1 400 000 so'm / tun</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- 2. Sanalar -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="check_in">Kelish sanasi (Check-in) <span class="required">*</span></label>
+                <div class="input-icon-wrap">
+                  <i class="fa-solid fa-calendar-day"></i>
+                  <input type="date" id="check_in" name="check_in" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="check_out">Ketish sanasi (Check-out) <span class="required">*</span></label>
+                <div class="input-icon-wrap">
+                  <i class="fa-solid fa-calendar-check"></i>
+                  <input type="date" id="check_out" name="check_out" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Mehmonlar soni -->
+            <div class="form-group">
+              <label for="guests_count">Mehmonlar soni <span class="required">*</span></label>
+              <div class="input-icon-wrap">
+                <i class="fa-solid fa-user-group"></i>
+                <select id="guests_count" name="guests_count" required>
+                  <option value="1">1 nafar mehmon</option>
+                  <option value="2" selected>2 nafar mehmon</option>
+                  <option value="3">3 nafar mehmon</option>
+                  <option value="4">4+ nafar mehmon</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- 4. Mijoz Ismi va Telefoni -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="full_name">To'liq ism-familiyangiz <span class="required">*</span></label>
+                <div class="input-icon-wrap">
+                  <i class="fa-solid fa-user"></i>
+                  <input type="text" id="full_name" name="full_name" placeholder="Masalan: Sardor Aliyev" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Telefon raqamingiz <span class="required">*</span></label>
+                <div class="input-icon-wrap">
+                  <i class="fa-solid fa-phone"></i>
+                  <input type="tel" id="phone" name="phone" placeholder="+998 90 123 45 67" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Email (Ixtiyoriy) -->
+            <div class="form-group">
+              <label for="email">Email manzilingiz (tasdiqnoma uchun)</label>
+              <div class="input-icon-wrap">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="misol@gmail.com">
+              </div>
+            </div>
+
+            <!-- 6. Qo'shimcha istaklar -->
+            <div class="form-group">
+              <label for="special_requests">Qo'shimcha istaklar yoki maxsus talablar</label>
+              <textarea id="special_requests" name="special_requests" rows="3" placeholder="Masalan: Erta kelish, tinch qavat, chaqaloq beshigi va h.k."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="submitBookingBtn" style="width: 100%; padding: 14px; font-size: 16px;">
+              <i class="fa-solid fa-check"></i> Bron qilishni tasdiqlash
+            </button>
+          </form>
+        </div>
+
+        <!-- O'ng tomonda: Xulosa hisob-kitob kartasi -->
+        <div class="booking-summary-col">
+          <div class="booking-summary-card">
+            <h3 class="summary-title"><i class="fa-solid fa-receipt" style="color: var(--primary);"></i> Buyurtma xulosasi</h3>
+            
+            <div class="summary-row">
+              <span>Tanlangan xona:</span>
+              <strong id="summary_room_name">Standart Qulay Xona</strong>
+            </div>
+
+            <div class="summary-row">
+              <span>Kunlik narx:</span>
+              <span id="summary_price_per_night">380 000 so'm</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Davomiylik:</span>
+              <span id="summary_nights">1 kecha</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Shved stoli nonushtasi:</span>
+              <span style="color: #16a34a; font-weight: 600;">Bepul (Kiritilgan)</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Soliq va xizmat haqi:</span>
+              <span style="color: #16a34a; font-weight: 600;">0 so'm</span>
+            </div>
+
+            <div class="summary-row total">
+              <span>Jami to'lov:</span>
+              <span class="total-amount" id="summary_total_price">380 000 so'm</span>
+            </div>
+
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted);">
+              <p style="margin-bottom: 8px;"><i class="fa-solid fa-shield-check" style="color: #16a34a;"></i> <strong>Hech qanday oldindan to'lov talab etilmaydi!</strong> To'lov joylashganda amalga oshiriladi.</p>
+              <p><i class="fa-solid fa-headset" style="color: var(--primary);"></i> Savollaringiz bormi? <a href="tel:+998957973366" style="color: var(--primary); font-weight: 700;">+998 (95) 797-33-66</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Muvaffaqiyat modali -->
+  <div class="modal-overlay" id="bookingSuccessModal">
+    <div class="modal-card">
+      <div class="modal-icon-success">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3>Xona muvaffaqiyatli bron qilindi!</h3>
+      <p>Hurmatli <strong id="modalClientName"></strong>, sizning xona buyurtmangiz qabul qilindi. Tez orada operatorimiz siz bilan bog'lanib, buyurtmani tasdiqlaydi.</p>
+
+      <div class="modal-code-box">
+        <span>Sizning buyurtma kodingiz:</span>
+        <strong id="modalBookingCode">LH-XXXXX</strong>
+      </div>
+
+      <div style="text-align: left; background: #f8fafc; border-radius: 8px; padding: 14px; margin-bottom: 24px; font-size: 13px; color: var(--slate-600);">
+        <div><strong>Xona:</strong> <span id="modalRoomName"></span></div>
+        <div style="margin: 4px 0;"><strong>Sana:</strong> <span id="modalDates"></span></div>
+        <div><strong>Jami summa:</strong> <span id="modalTotalPrice" style="color: var(--primary); font-weight: 700;"></span></div>
+      </div>
+
+      <div style="display: flex; gap: 10px;">
+        <button class="btn btn-primary" onclick="closeBookingModal()" style="flex: 1;">
+          Yopish
+        </button>
+        <a href="index.html" class="btn btn-dark" style="flex: 1;">
+          Bosh sahifaga
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fa-solid fa-lemon"></i></div>
+            <span>Lemon Hotel</span>
+          </a>
+          <p>Toshkent shahrining markazida hashamatli va maroqli hordiq.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Tezkor havolalar</h3>
+          <ul>
+            <li><a href="index.html">Bosh sahifa</a></li>
+            <li><a href="rooms.html">Xonalar</a></li>
+            <li><a href="about.html">Biz haqimizda</a></li>
+            <li><a href="contact.html">Aloqa</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Aloqa</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+998 (95) 797-33-66</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>lemonhoteluz@gmail.com</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Admin</h3>
+          <a href="admin.php" class="btn btn-outline" style="font-size: 13px; padding: 8px 14px;">
+            <i class="fa-solid fa-lock"></i> Admin Panel
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lemon Hotel. Barcha huquqlar himoyalangan.</p>
+        <div><a href="admin.php">Admin tizimi</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
